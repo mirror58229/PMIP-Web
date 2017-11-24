@@ -103,8 +103,8 @@
 
                     <th><i class="fa fa-bookmark"></i>学号</th>
                     <th><i class="fa fa-user"></i>姓名</th>
-                    <th><i class="fa fa-file"></i>材料名称</th>
-                    <th><i class="fa fa-tags"></i>材料类别</th>
+                    <th><i class="fa fa-file"></i>申请名称</th>
+                    <th><i class="fa fa-tags"></i>申请类别</th>
                     <th><i class="fa fa-clock-o"></i>申请时间</th>
                     <th><i class="fa fa-globe"></i>状态(点击下载附件)</th>
                 </tr>

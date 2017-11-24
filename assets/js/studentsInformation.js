@@ -170,8 +170,56 @@ $(function(){
                 if(this.value===" "||this.value==null){
                     this.value=$(this).attr("placeholder");
                 }
+                var c=this.name;
+                switch(c){
+                    case "studentId":idCheck(this);break;
+                    case "studentName":nameCheck(this);break;
+                }
         })
     });
+
+    /**
+     * 表单校验
+     * @author wbf
+     */
+    function idCheck(id) {
+        var reg=/^\d{10}(\d{2})?$/;
+        var item=$(id).parent();
+        if(reg.test(id.value)==true){
+            if(item.hasClass("has-error")){
+                item.removeClass("has-error").addClass("has-success")
+            }else {
+                item.addClass("has-success")
+            }
+        }else{
+            item.addClass("has-error")
+        }
+    }
+
+    function nameCheck(name) {
+        var reg=/^[\u4e00-\u9fa5]{1}[\u4e00-\u9fa5\·]{0,8}[\u4e00-\u9fa5]{1}$/;     //汉字  · 空格 是合法的
+        var rel = new RegExp("^([a-zA-Z\\s]+)$");//英文
+        var item=$(name).parent();
+        if(reg.test(name.value)==true||rel.test(name.value)==true){
+            if(item.hasClass("has-error")) {
+                item.removeClass("has-error").addClass("has-success");
+            }else {
+                item.addClass("has-success")
+            }
+        }else{
+            item.addClass("has-error")
+        }
+
+    }
+
+
+    $("#myform").on("submit",function () {
+        return checkForm();
+    })
+    function checkForm() {
+
+    }
+
 
 
     /*实现三级联动*/
@@ -219,7 +267,7 @@ $(function(){
        var $tr=$("<tr></tr>")
        for(var j=0;j<10;j++){
            var $th=$("<th></th>");
-           var $href=$("<a href='manageStudent.jsp'>更多>></a>")
+           var $href=$("<a href='manageStudent.html'>更多>></a>")
            var c=index[j];
            switch(c) {
                case "department":$th.html(students.selectedStudents[i].department);break;
