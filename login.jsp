@@ -7,10 +7,10 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/login.css"/>
 	<meta charset="utf-8">
 	<script src="assets/js/login.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
 </head>
 <body>
 <form id="sub" action="" method="post">
@@ -39,7 +39,6 @@
 		</div>
 
 		<div class="row" style="height: 7px"></div>
-		
 		<div class="row">
 			<div class="col-lg-1 col-lg-offset-1 col-xs-1 col-xs-offset-1 col-md-1 col-md-offset-1 col-sm-1 col-sm-offset-1">
 				<div class="row">
@@ -54,13 +53,13 @@
 		<div class="row"></div>
 		<div class="row"></div>
 		<div class="row"></div>
-		
+
 		<div class="row">
 			<div class="col-lg-4 col-lg-offset-2 col-xs-4 col-xs-offset-2  col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
-				<i id="student" onclick="toStudent()" class="icon-check-empty"></i><label onclick="toStudent()">&nbsp&nbsp学生</label>
+				<i id="student" onclick="toStudent()" class="fa fa-square-o"></i><label onclick="toStudent()">&nbsp&nbsp学生</label>
 			</div>
 			<div class="col-lg-4 col-lg-offset-1 col-xs-4 col-xs-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
-				<i id="manager" onclick="toManager()" class="icon-check-empty"></i><label onclick="toManager()">&nbsp&nbsp管理员</label>
+				<i id="manager" onclick="toManager()" class="fa fa-square-o"></i><label onclick="toManager()">&nbsp&nbsp管理员</label>
 			</div>
 
 		</div>

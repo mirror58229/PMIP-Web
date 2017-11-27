@@ -7,8 +7,6 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/mycss.css">
-	<link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/modifyPassword.css">
 	<script src="assets/js/modifyPassword.js"></script>
 	<meta charset="utf-8">
