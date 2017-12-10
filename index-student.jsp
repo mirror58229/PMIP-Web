@@ -371,9 +371,11 @@
 	                        <div class="col-lg-4">
 	                        	<div class="cet4add">
 	                        		<label for="choosefile">成绩</label>
-			                        <select class="form-control" id="selectTest2">
+			                        <select class="form-control" id="selectTest2" >
 			                        	<option value="0">成绩</option>
 			                        </select>
+                                    <input type="text" class="form-control" id="grade-content" style="display: none">
+
 			                        <br>
 		                        </div>
 	                        </div>
@@ -448,6 +450,9 @@
 					</table>
 				</div>
 			</div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -468,4 +473,4 @@
 </div><!-- #footer -->
 
 </body>
-</html>
+

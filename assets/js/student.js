@@ -187,6 +187,12 @@ $("#showntype").change(function (){
 //	var selectTest2=$("#selectTest2");
 	
 	if(showntype.value.equals("1")){
+        var slt=document.getElementById("selectTest2");
+        var input=document.getElementById("grade-content")
+
+        slt.style.display = "block";
+        input.style.display = "none";
+
 		selectTest2.length=7;
 		selectTest2.options[1].value="1";
 		selectTest2.options[1].text="全国计算机二级合格";
@@ -200,9 +206,17 @@ $("#showntype").change(function (){
 		selectTest2.options[5].text="全国计算机四级合格";
 		selectTest2.options[6].value="6";
 		selectTest2.options[6].text="全国计算机四级优秀";
+
+
 	}
-	else if(showntype.value.equals("2")){
+	else if(showntype.value.equals("2") || showntype.value.equals("3") || showntype.value.equals("4") || showntype.value.equals("5")){
 		alert("aaa");
+        var slt=document.getElementById("selectTest2");
+        var input=document.getElementById("grade-content")
+
+        slt.style.display = "none";
+        input.style.display = "block"
+
 //		cet4add.removeChild(selectTest2);
 //		var newinput = document.createElement("newInput");
 //		newinput.type = mytype;
