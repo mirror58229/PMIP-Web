@@ -58,7 +58,8 @@
                     <div class="contact-area">
                         <ul>
                             <li><i class="fa fa-user"></i>当前用户：1506010123（学生）</li>
-                            <li><a href="#">注销</a></li>
+                            <li><a href="login.jsp">注销</a></li>
+                            <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
                 </div>
@@ -118,7 +119,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <div class="col-md-8">
             <div class="MidPersonalInformation">
                 <table class="table table-bordered">
@@ -334,6 +335,7 @@
                             <option value="0">入党申请</option>
                             <option value="1">思想汇报</option>
                             <option value="2">自传</option>
+                            <option value="3">其他</option>
                         </select>
                         <div class="form-group">
                         <label for="inputfile">上传文件</label>
@@ -343,52 +345,54 @@
                     </div>
                 </form>
             </div>
-           
-             
+
+
             <div class="MidApplicationMaterial">
                 <form role="form" action="${pageContext.request.contextPath }/student/login.action" method="post">
-                
+
                     <div class="form-group" >
-                    
-                        <div class="col-md-12">
+
+                        <div class="row">
                             <div class="col-lg-3">
-                        		<label for="name">证明类型</label>
-                        		</span><select class="form-control" id="showntype">
-                        		<option value="0"></option>
-                        		<option value="1">计算机等级考试</option>
-                        		<option value="2">四级成绩</option>
-                        		<option value="3">六级成绩</option>
-                        		</select> 
+                        		<label for="name">申请类型</label>
+                        		<select class="form-control" id="showntype">
+                                    <option value="0">申请类型</option>
+                                    <option value="1">计算机等级考试</option>
+                                    <option value="2">四级成绩</option>
+                                    <option value="3">六级成绩</option>
+                                    <option value="4">社会工作</option>
+                                    <option value="5">其他</option>
+                        		</select>
                         	</div>
-                        </div>  
+                        </div>
                         <br>
 
-                         <div class="col-md-12">
+                         <div class="row">
 	                        <div class="col-lg-4">
 	                        	<div class="cet4add">
 	                        		<label for="choosefile">成绩</label>
 			                        <select class="form-control" id="selectTest2">
-			                        	<option value="0"></option>
-			                        </select> 
+			                        	<option value="0">成绩</option>
+			                        </select>
 			                        <br>
 		                        </div>
 	                        </div>
 	                    </div>
-	                    
+
 	                    <div class="form-group">
-                        <label for="inputfile">上传文件</label>
-                        <input type="file" id="inputfile">
+                            <label for="inputfile">上传文件</label>
+                            <input type="file" id="inputfile">
                    		</div>
-                   		 
+
                     	<button type="submit" class="btn btn-default">提交</button>
-                    	
+
                     </div>
                 </form>
             </div>
-            
-           
-            
-            
+
+
+
+
 		 	<div class="MidCommonFile">
             	<div class="col-md-12">
                     <a href="#" class="list-group-item ">入党申请表格</a>
@@ -398,10 +402,10 @@
                     <a href="#" class="list-group-item"></a>
             	</div>
 			</div>
-                
-           	
-           
-           	
+
+
+
+
            	<div class="MidNotification">
 				<div class="col-md-12">
 					<table class="table table-bordered">

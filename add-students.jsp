@@ -55,7 +55,8 @@
                     <div class="contact-area">
                         <ul>
                             <li><i class="fa fa-user"></i>当前用户：1506010123（XX）</li>
-                            <li><a href="#">注销</a></li>
+                            <li><a href="login.jsp">注销</a></li>
+                            <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,17 +109,13 @@
                 </div>
                 <div class="panel-body">
                     <div id="introduction" class="row-fluid">
-                        <h2>
-                            Function introduction
-                        </h2>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                            euismod. Donec sed odio dui.
-                        </p>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
+                        <h4>
+                           单个添加：添加某个同学的信息
+                        </h4>
+                        <h4>
+                            批量导入：通过xls表格文件批量导入同学信息
+                        </h4>
+
                     </div>
                     <div id="studentInfo" class="row-fluid hidden">
                         <form method="post" action="${pageContext.request.contextPath }/manager/addStudent.action" class="form-horizontal" id="myform">

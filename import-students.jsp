@@ -58,7 +58,8 @@
                     <div class="contact-area">
                         <ul>
                             <li><i class="fa fa-user"></i>当前用户：1506010123（XX）</li>
-                            <li><a href="#">注销</a></li>
+                            <li><a href="login.jsp">注销</a></li>
+                            <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
                 </div>
@@ -134,7 +135,7 @@
                             <div class="col-sm-8">
                                 <div class="col-sm-6">
                                     <select class="form-control selectChoice" id="materialType" name="materialType">
-                                    <option class="label" value="0">选择材料类型</option>
+
                                     <option value="">思想汇报</option>
                                     <option value="">转正申请</option>
                                     <option value="">竞赛成果</option>
