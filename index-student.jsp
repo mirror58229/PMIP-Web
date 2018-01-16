@@ -57,8 +57,8 @@
                 <div class="block-right">
                     <div class="contact-area">
                         <ul>
-                            <li><i class="fa fa-user"></i>当前用户：1506010123（学生）</li>
-                            <li><a href="login.jsp">注销</a></li>
+                            <li><i class="fa fa-user"></i>当前用户：</li>
+                            <li><a href="${pageContext.request.contextPath}/student/quit.action">注销</a></li>
                             <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
@@ -72,7 +72,7 @@
                         <a href="#" data-toggle="tab" class="PersonalManagement">个人管理</a>
                     </li>
                     <li>
-                        <a href="#" data-toggle="tab" class="MaterialManagement">材料管理</a>
+                        <a href="www.baidu.com" data-toggle="tab" class="MaterialManagement">材料管理</a>
                     </li>
                     <li>
                         <a href="#" data-toggle="tab" class="Alerts" class="badge pull-right"><span
@@ -119,7 +119,7 @@
                 </li>
             </ul>
         </div>
-
+        
         <div class="col-md-8">
             <div class="MidPersonalInformation">
                 <table class="table table-bordered">
@@ -128,41 +128,44 @@
                     <tr>
                         <th>姓名</th>
                         <td>
-                            <c:set target="${student}" property="studentname" value="李金桥"></c:set>
-                            <c:out value="${student.studentname}"></c:out>
+                            <c:set target="${student}" property="studentname" value="李金桥"></c:set><!-- ************* -->
+                            ${student.studentname }
                         </td>
                         <th>性别</th>
                         <td>
-                            <c:set target="${student}" property="sex" value="男"></c:set>
-                            <c:out value="${student.sex}"></c:out>
+                            <c:set target="${student}" property="sex" value="女"></c:set><!-- ************* -->
+                            ${student.sex }
                         </td>
                     </tr>
                     <tr>
                         <th>学号</th>
                         <td>
-                            <c:set target="${student}" property="studentnumber" value="1506010518"></c:set>
-                            <c:out value="${student.studentnumber}"></c:out>
+                            <c:set target="${student}" property="studentnumber" value="1506010518"></c:set><!-- ************* -->
+                            ${student.studentnumber }
                         </td>
                         <th>年级专业班级</th>
-                        <td>暂无</td>
+                        <td>
+                        	 <c:set target="${student}" property="studentclass" value="15计算机5班"></c:set><!-- ************* -->
+                        	${student.studentclass }
+                        </td>
                     </tr>
                     <tr>
                         <th>政治面貌</th>
                         <td>
-                            <c:set target="${student}" property="state" value="党员"></c:set>
-                            <c:out value="${student.state}"></c:out>
+                            <c:set target="${student}" property="state" value="党员"></c:set><!-- ************* -->
+                            ${student.state}
                         </td>
                         <th>邮箱</th>
                         <td>
-                            <c:set target="${student}" property="email" value="lijinqiao@hhu.com"></c:set>
-                            <c:out value="${student.email}"></c:out>
+                            <c:set target="${student}" property="email" value="lijinqiao@hhu.com"> </c:set><!-- ************* -->
+                            ${student.email}
                         </td>
                     </tr>
                     <tr>
                         <th>绩点</th>
                         <td>
-                            <c:set target="${gradetable}" property="grade" value="3.0"></c:set>
-                            <c:out value="${gradetable.grade}"></c:out>
+                            <c:set target="${gradetable}" property="grade" value="2.9"></c:set><!-- ************* -->
+                            ${gradetable.grade}
                         </td>
                         <th>排名</th>
                         <td>暂无此数据</td>
@@ -170,13 +173,13 @@
                     <tr>
                         <th>四级</th>
                         <td>
-                            <c:set target="${gradetable}" property="cet4grade" value="424"></c:set>
-                            <c:out value="${gradetable.cet4grade}"></c:out>
+                            <c:set target="${gradetable}" property="cet4grade" value="424"></c:set><!-- ************* -->
+                            ${gradetable.cet4grade}
                         </td>
                         <th>六级</th>
                         <td>
-                            <c:set target="${gradetable}" property="cet6grade" value="666"></c:set>
-                            <c:out value="${gradetable.cet6grade}"></c:out>
+                            <c:set target="${gradetable}" property="cet6grade" value="666"></c:set><!-- ************* -->
+                            ${gradetable.cet6grade}
                         </td>
                     </tr>
                     <tr>
@@ -194,6 +197,11 @@
                     </tbody>
                 </table>
             </div>
+            
+            
+            
+            
+            
             <div class="MidPartyInformation">
                 <table class="table table-bordered">
                     <caption><h2>党籍信息</h2></caption>
@@ -204,42 +212,46 @@
                     </tr>
                     <tr>
                         <td>
-                            <c:set target="${student}" property="indirectingtime" value="2017"></c:set>
-                            <c:out value="${student.indirectingtime}"></c:out>
+                            <c:set target="${student}" property="indirectingtime" value="2017"></c:set><!-- ************* -->
+                            ${student.indirectingtime}
                         </td>
                         <td>推优时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <c:set target="${student}" property="activisttime" value="2017"></c:set>
-                            <c:out value="${student.activisttime}"></c:out>
+                            <c:set target="${student}" property="activisttime" value="2017"></c:set><!-- ************* -->
+                            ${student.activisttime}
                         </td>
                         <td>积极分子时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <c:set target="${student}" property="developementtime" value="2017"></c:set>
-                            <c:out value="${student.developementtime}"></c:out>
+                            <c:set target="${student}" property="developementtime" value="2017"></c:set><!-- ************* -->
+                            ${student.developementtime}
                         </td>
                         <td>发展党员时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <c:set target="${student}" property="probationarytime" value="2017"></c:set>
-                            <c:out value="${student.probationarytime}"></c:out>
+                            <c:set target="${student}" property="probationarytime" value="2017"></c:set><!-- ************* -->
+                            ${student.probationarytime}
                         </td>
                         <td>预备党员时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <c:set target="${student}" property="fullmembertime" value="2017"></c:set>
-                            <c:out value="${student.fullmembertime}"></c:out>
+                            <c:set target="${student}" property="fullmembertime" value="2017"></c:set><!-- ************* -->
+                            ${student.fullmembertime}
                         </td>
                         <td>正式党员时间</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+           
+           
+           
+           
             <div class="MidRewardsAndPunishments">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -277,6 +289,11 @@
                     </div>
                 </div>
             </div>
+            
+            
+            
+            
+            
             <div class="MidUploadedMaterial">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -295,30 +312,26 @@
                             </tr>
 
                             <tr>
-                                <td><c:set target="${material}" property="materialname" value="优秀党员证明材料"></c:set>
-                                    <c:out value="${material.materialname}"></c:out></td>
-                                <td><c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set>
-                                    <a href="#">
-                                        <c:out value="${material.materialurl}"></c:out>
-                                    </a>
+                                <td><c:set target="${material}" property="materialname" value="优秀党员证明材料"></c:set><!-- ************** -->
+                                    ${material.materialname}
+                                <td><c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set><!-- ************** -->
+                                    <a href="#">${material.materialurl}</a>
                                 </td>
                                 <td>暂无此数据</td>
-                                <td><c:set target="${material}" property="state" value="审核中"></c:set>
-                                    <c:out value="${material.state}"></c:out></td>
+                                <td><c:set target="${material}" property="state" value="审核中"></c:set><!-- ************** -->
+                                    ${material.state}
                                 </td>
                             </tr>
                             <tr>
                             <tr>
-                                <td><c:set target="${material}" property="materialname" value="社会工作证明材料"></c:set>
-                                    <c:out value="${material.materialname}"></c:out></td>
-                                <td><c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set>
-                                    <a href="#">
-                                        <c:out value="${material.materialurl}"></c:out>
-                                    </a>
+                                <td><c:set target="${material}" property="materialname" value="社会工作证明材料"></c:set><!-- ************** -->
+                                    ${material.materialname}
+                                <td><c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set><!-- ************** -->
+                                    <a href="#">${material.materialurl}</a>
                                 </td>
                                 <td>暂无此数据</td>
-                                <td><c:set target="${material}" property="state" value="已通过"></c:set>
-                                    <c:out value="${material.state}"></c:out></td>
+                                <td><c:set target="${material}" property="state" value="已通过"></c:set><!-- ************** -->
+                                    ${material.state}
                                 </td>
                             </tr>
                             </tr>
@@ -327,74 +340,126 @@
                     </div>
                 </div>
             </div>
+            
+            
+            
+            
             <div class="MidUploadMaterial">
-                <form role="form" action="${pageContext.request.contextPath }/student/login.action" method="post">
+                     <form role="form" method="post" action="${pageContext.request.contextPath }/material/uploadFile.action" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="name">材料名称</label>
-                        <select class="form-control selectChoice" name=" ">
-                            <option value="0">入党申请</option>
-                            <option value="1">思想汇报</option>
-                            <option value="2">自传</option>
-                            <option value="3">其他</option>
-                        </select>
-                        <div class="form-group">
-                        <label for="inputfile">上传文件</label>
-                        <input type="file" id="inputfile">
-                   		 </div>
-                    	<button type="submit" class="btn btn-default">提交</button>
+                    	<div class="col-md-12">
+                        	<div class="col-lg-4">
+                         	</div>
+                            <div class="col-lg-4">
+		                        <label for="name">材料名称</label>
+		                        <select class="form-control selectChoice" name=" "><!-- *********** -->
+		                            <option value="0">入党申请</option>
+		                            <option value="1">思想汇报</option>
+		                            <option value="2">自传</option>
+		                        </select>
+		                     
+		                        <div class="form-group">
+		                        <label for="inputfile">上传文件</label>
+		                        <input type="file" id="inputfile" name="uploadFile">
+		                   		 </div>
+		                   		 
+		                   		 <c:set target="${material}" property="materialname" value="优秀党员证明材料"></c:set>
+		                   		   <% //request.setAttribute("studentname", ${student.studentname } ); %> 
+		                   		
+		                    	<button type="submit" class="btn btn-default">提交</button>
+                    	
+                    		</div>
+		                </div>
                     </div>
                 </form>
             </div>
-
-
+                        
             <div class="MidApplicationMaterial">
                 <form role="form" action="${pageContext.request.contextPath }/student/login.action" method="post">
-
+                
                     <div class="form-group" >
-
-                        <div class="row">
-                            <div class="col-lg-3">
-                        		<label for="name">申请类型</label>
-                        		<select class="form-control" id="showntype">
-                                    <option value="0">申请类型</option>
-                                    <option value="1">计算机等级考试</option>
-                                    <option value="2">四级成绩</option>
-                                    <option value="3">六级成绩</option>
-                                    <option value="4">社会工作</option>
-                                    <option value="5">其他</option>
+                    
+                        <div class="col-md-12">
+                        	<div class="col-lg-4">
+                         	</div>
+                            <div class="col-lg-4">
+                        		<label for="name">证明类型</label>
+                        		
+                        		<select class="form-control" id="showntype" >
+                        		<option value="0"></option>
+                        		<option value="1">计算机等级考试</option>
+                        		<option value="2">四级成绩</option>
+                        		<option value="3">六级成绩</option>
+                        		<option value="4">社会工作</option>
+                                <option value="5">其他</option>
                         		</select>
+                        		
                         	</div>
-                        </div>
+                        </div>  
                         <br>
-
-                         <div class="row">
+                         <div class="col-md-12">
+                         	<div class="col-lg-4">
+                         	</div>
 	                        <div class="col-lg-4">
 	                        	<div class="cet4add">
-	                        		<label for="choosefile">成绩</label>
-			                        <select class="form-control" id="selectTest2" >
-			                        	<option value="0">成绩</option>
-			                        </select>
-                                    <input type="text" class="form-control" id="grade-content" style="display: none">
-
+	                        		<label for="choosefile">名称</label>
+	                        		
+	                        		<div id="computerTest">
+				                        <select class="form-control" >
+				                        	<option value="0"></option>
+				                        	<option value="1">全国计算机二级合格</option>
+				                        	<option value="2">全国计算机二级优秀</option>
+				                        	<option value="3">全国计算机三级合格</option>
+				                        	<option value="4">全国计算机三级优秀</option>
+				                        	<option value="5">全国计算机四级合格</option>
+				                        	<option value="6">全国计算机四级优秀</option>
+				                        </select> 
+			                        </div>
+			                        
+			                        <div id="Cet4Test">
+				                        <input type="number" name="Cet4" /> 
+			                        </div>
+			                        
+			                        <div id="Cet6Test">
+				                        <input type="number" name="Cet6" /> 
+			                        </div>
+			                        <div id="SocialWork">
+			                        	<!--<select class="form-control" >
+				                        	<option value="0"></option>
+				                        	<option value="1">校级</option>
+				                        	<option value="2">院级</option>
+				                        	<option value="3">班级</option>
+				                        </select> 
+				                        <br>-->
+				                        <input " name="SocialWork" /> 
+				                        
+			                        </div>
+			                        <div id="others">
+				                        <input  name="others" /> 
+			                        </div>
+			                        
 			                        <br>
 		                        </div>
 	                        </div>
 	                    </div>
-
-	                    <div class="form-group">
-                            <label for="inputfile">上传文件</label>
-                            <input type="file" id="inputfile">
-                   		</div>
-
-                    	<button type="submit" class="btn btn-default">提交</button>
-
+	                    <div class="col-md-12">
+	                    	<div class="col-lg-4">
+                         	</div>
+		                    <div class="col-lg-4">
+		                    	<div class="form-group">
+			                        <label for="inputfile">上传文件</label>
+			                        <input type="file" id="inputfile">
+		                   		</div>
+		                   		<button type="submit" class="btn btn-default">提交</button>
+	                   		</div>
+	                   	</div>
                     </div>
                 </form>
             </div>
-
-
-
-
+            
+           
+            
+            
 		 	<div class="MidCommonFile">
             	<div class="col-md-12">
                     <a href="#" class="list-group-item ">入党申请表格</a>
@@ -404,10 +469,10 @@
                     <a href="#" class="list-group-item"></a>
             	</div>
 			</div>
-
-
-
-
+                
+           	
+           
+           	
            	<div class="MidNotification">
 				<div class="col-md-12">
 					<table class="table table-bordered">
@@ -420,39 +485,36 @@
 							</tr>
 							<tr>
 								<td><c:set target="${massage}" property="newstitle" value="十九大报告"></c:set>
-									<c:out value="${massage.newstitle}"></c:out>
+									${massage.newstitle}
 								</td>
 								<td><c:set target="${massage}" property="newscontent" value="十九大报告分析"></c:set>
-									<a href="#"><c:out value="${massage.newscontent}"></c:out></a>
+									${massage.newscontent}
 								</td>
 								<td><c:set target="${massage}" property="newstime" value="2017.09.03"></c:set>
-									<c:out value="${massage.newstime}"></c:out>
+									${massage.newstime}
 								</td>
 								<td><c:set target="${massage}" property="newstate" value="已读"></c:set>
-									<c:out value="${massage.newstate}"></c:out>
+									${massage.newstate}
 								</td>
 							</tr>
 							<tr>
 							<td><c:set target="${massage}" property="newstitle" value="党员培训通知"></c:set>
-								<c:out value="${massage.newstitle}"></c:out>
+								${massage.newstitle}
 							</td>
 							<td><c:set target="${massage}" property="newscontent" value="www.baidu.com"></c:set>
-								<a href="#"><c:out value="${massage.newscontent}"></c:out></a>
+								<a href="#">${massage.newscontent}</a>
 							</td>
 							<td><c:set target="${massage}" property="newstime" value="2017.10.10"></c:set>
-								<c:out value="${massage.newstime}"></c:out>
+								${massage.newstime}
 							</td>
 							<td><c:set target="${massage}" property="newstate" value="未读"></c:set>
-								<c:out value="${massage.newstate}"></c:out>
+								${massage.newstate}
 							</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -473,4 +535,4 @@
 </div><!-- #footer -->
 
 </body>
-
+</html>

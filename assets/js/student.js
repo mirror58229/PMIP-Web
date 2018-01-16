@@ -34,7 +34,13 @@ var LeftMMLi=$("#LeftMM Li");
 var LeftAlertsLi=$("#LeftAlerts  Li");
 
 
-
+//申请时的各种输入框
+var showntype=document.getElementById("showntype");
+var computerTest=$("#computerTest");
+var Cet4Test=$("#Cet4Test");
+var Cet6Test=$("#Cet6Test");
+var SocialWork=$("#SocialWork");
+var others=$("#others");
 
 
 //更换导航栏被选中的元素背景
@@ -57,6 +63,12 @@ function initPage(){
 	MidCommonFile.hide();
     MidNotification.hide();
     MidApplicationMaterial.hide();
+    
+    computerTest.show();
+    Cet4Test.hide();
+    Cet6Test.hide();
+    SocialWork.hide();
+    others.hide();
 }
 
 //上方导航元素被点击以后
@@ -71,6 +83,9 @@ MaterialManagement.click(function(){  //上方材料管理
     LeftPM.hide();
     LeftMM.show();
     UploadedMaterial.click();
+    //需要添加获得材料的URL跳转
+   
+    
 });
 Alerts.click(function(){     //上方消息通知
     LeftAlerts.show();
@@ -179,59 +194,50 @@ Notification.click(function(){
 
 
 
+
 $("#showntype").change(function (){   
-	var showntype=document.getElementById("showntype");
-	var selectTest2=document.getElementById("selectTest2");
-	var cet4add=document.getElementById("cet4add");
-//	var showntype= $("#showntype");
-//	var selectTest2=$("#selectTest2");
+	
 	
 	if(showntype.value.equals("1")){
-        var slt=document.getElementById("selectTest2");
-        var input=document.getElementById("grade-content")
-
-        slt.style.display = "block";
-        input.style.display = "none";
-
-		selectTest2.length=7;
-		selectTest2.options[1].value="1";
-		selectTest2.options[1].text="全国计算机二级合格";
-		selectTest2.options[2].value="2";
-		selectTest2.options[2].text="全国计算机二级优秀";
-		selectTest2.options[3].value="3";
-		selectTest2.options[3].text="全国计算机三级合格";
-		selectTest2.options[4].value="4";
-		selectTest2.options[4].text="全国计算机三级优秀";
-		selectTest2.options[5].value="5";
-		selectTest2.options[5].text="全国计算机四级合格";
-		selectTest2.options[6].value="6";
-		selectTest2.options[6].text="全国计算机四级优秀";
-
-
+		computerTest.show();
+		Cet4Test.hide();
+		Cet6Test.hide();
+		SocialWork.hide();
+		others.hide();
 	}
-	else if(showntype.value.equals("2") || showntype.value.equals("3") || showntype.value.equals("4") || showntype.value.equals("5")){
-		alert("aaa");
-        var slt=document.getElementById("selectTest2");
-        var input=document.getElementById("grade-content")
-
-        slt.style.display = "none";
-        input.style.display = "block"
-
-//		cet4add.removeChild(selectTest2);
-//		var newinput = document.createElement("newInput");
-//		newinput.type = mytype;
-//		newinput.id = "newInput";
-//		var newline= document.createElement("br");  
-//		cet4add.appendChild(newline);
-}
+	else if(showntype.value.equals("2")){
+		computerTest.hide();
+		Cet4Test.show();
+		Cet6Test.hide();
+		SocialWork.hide();
+		others.hide();
+	}
+	else if (showntype.value.equals("3")){
+		computerTest.hide();
+		Cet4Test.hide();
+		Cet6Test.show();
+		SocialWork.hide();
+		others.hide();
+	}
+	else if(showntype.value.equals("4")){
+		computerTest.hide();
+		Cet4Test.hide();
+		Cet6Test.hide();
+		SocialWork.show();
+		others.hide();
+	}
+	else if(showntype.value.equals("4")){
+		computerTest.hide();
+		Cet4Test.hide();
+		Cet6Test.hide();
+		SocialWork.hide();
+		others.show();
+	}
 });
 
 String.prototype.equals = function(s){  
     return this == s;  
 } 
-
-
-
 
 
 
