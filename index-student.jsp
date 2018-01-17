@@ -144,10 +144,10 @@
                             ${student.studentnumber }
                         </td>
                         <th>年级专业班级</th>
-                        <td>
-                        	 <c:set target="${student}" property="studentclass" value="15计算机5班"></c:set><!-- ************* -->
-                        	${student.studentclass }
-                        </td>
+                        <%--<td>--%>
+                        	 <%--<c:set target="${student}" property="studentclass" value="15计算机5班"></c:set><!-- ************* -->--%>
+                        	<%--${student.studentclass }--%>
+                        <%--</td>--%>
                     </tr>
                     <tr>
                         <th>政治面貌</th>
@@ -348,8 +348,7 @@
                      <form role="form" method="post" action="${pageContext.request.contextPath }/material/uploadFile.action" enctype="multipart/form-data">
                     <div class="form-group">
                     	<div class="col-md-12">
-                        	<div class="col-lg-4">
-                         	</div>
+
                             <div class="col-lg-4">
 		                        <label for="name">材料名称</label>
 		                        <select class="form-control selectChoice" name=" "><!-- *********** -->
@@ -380,8 +379,7 @@
                     <div class="form-group" >
                     
                         <div class="col-md-12">
-                        	<div class="col-lg-4">
-                         	</div>
+
                             <div class="col-lg-4">
                         		<label for="name">证明类型</label>
                         		
@@ -398,8 +396,7 @@
                         </div>  
                         <br>
                          <div class="col-md-12">
-                         	<div class="col-lg-4">
-                         	</div>
+
 	                        <div class="col-lg-4">
 	                        	<div class="cet4add">
 	                        		<label for="choosefile">名称</label>
@@ -431,7 +428,7 @@
 				                        	<option value="3">班级</option>
 				                        </select> 
 				                        <br>-->
-				                        <input " name="SocialWork" /> 
+				                        <input  name="SocialWork" />
 				                        
 			                        </div>
 			                        <div id="others">
@@ -443,8 +440,7 @@
 	                        </div>
 	                    </div>
 	                    <div class="col-md-12">
-	                    	<div class="col-lg-4">
-                         	</div>
+
 		                    <div class="col-lg-4">
 		                    	<div class="form-group">
 			                        <label for="inputfile">上传文件</label>
