@@ -142,25 +142,13 @@ $(function(){
             };
         };
     })(jQuery);
-    
-    /**
-     * 设置日期控件
-     * @author WBF
-     * **/
-//    $("#date").datetimepicker({
-//        startView:4,
-//        maxView:4,
-//        minView:2,
-//        format: "yyyy-mm-dd ",
-//        autoclose: true,
-//        todayBtn: true,
-//        todayHighlight:true
-//    });
 
-    /**
-     * 设置定时器
-     * @author WBF
-     * */
+
+
+    /*
+    * 设置定时器
+    *
+    * */
     setInterval( function  getTime(){
         var myDate =new Date();
         var nowTime=myDate.toLocaleString();
@@ -186,7 +174,6 @@ $(function(){
         $("#studentsInfo").removeClass("hidden")
     })
 
-   
 
     /**
      * 设置鼠标聚焦和鼠标离开事件
@@ -196,22 +183,33 @@ $(function(){
 
     inputs.each(function(i,element) {
         $(element).on("focus",function () {
-            this.value=" "
+            //获取表单的父元素
+            var item=$(this).parent();
+            if(item.hasClass("has-success")){
+               item.removeClass("has-success")
+            }else if(item.hasClass("has-error")){
+              item.hasClass("has-error")
+            }
+            this.value=""
         }).on("blur",function () {
-                if(this.value===" "||this.value==null){
+                if(this.value===""||this.value==null){
                     this.value=$(this).attr("placeholder");
                 }
                 var c=this.name;
                 switch(c){
                     case "studentId":idCheck(this);break;
                     case "studentName":nameCheck(this);break;
+                    case "CET-4":scoreCheck(this);break;
+                    case "CET-6":scoreCheck(this);break;
+                    case "GPA":GPACheck(this);break;
                 }
         })
     });
 
     /**
-     * 表单校验
+     * 学生学号校验
      * @author wbf
+     * @param id
      */
     function idCheck(id) {
         var reg=/^\d{10}(\d{2})?$/;
@@ -227,6 +225,11 @@ $(function(){
         }
     }
 
+    /**
+     * 姓名校验
+     * @author wbf
+     * @param name
+     */
     function nameCheck(name) {
         var reg=/^[\u4e00-\u9fa5]{1}[\u4e00-\u9fa5\·]{0,8}[\u4e00-\u9fa5]{1}$/;     //汉字  · 空格 是合法的
         var rel = new RegExp("^([a-zA-Z\\s]+)$");//英文
@@ -240,9 +243,45 @@ $(function(){
         }else{
             item.addClass("has-error")
         }
-
     }
 
+    /**
+     * 四六级成绩校验
+     * @author wbf
+     * @param score
+     */
+    function scoreCheck(score) {
+        var grade=parseInt(score.value);
+        var item=$(score).parent();
+        if(grade>=300&&grade<=710){
+            if(item.hasClass("has-error")){
+                item.removeClass("has-error").addClass("has-success")
+            }else {
+                item.addClass("has-success")
+            }
+        }else{
+            item.addClass("has-error")
+        }
+    }
+
+    /**
+     * 绩点校验
+     * @param grade
+     * @author wbf
+     */
+    function  GPACheck(grade) {
+        var gpa=parseFloat(grade.value);
+        var item=$(grade).parent();
+        if(gpa>=0&&gpa<=5.0){
+            if(item.hasClass("has-error")){
+                item.removeClass("has-error").addClass("has-success")
+            }else {
+                item.addClass("has-success")
+            }
+        }else{
+            item.addClass("has-error")
+        }
+    }
 
     $("#myform").on("submit",function () {
         return checkForm();
@@ -263,31 +302,31 @@ $(function(){
     });
 
 
-    获取搜索的学生记录
-     var students={
-         "selectedStudents":[
-             {   department:"计算机与信息学院",
-                 grade:"2015级",
-                 domain:"计算机科学与技术",
-                 classes:"5",
-                 id:1506010512,
-                 name:"金培源",
-                 sex:"男",
-                 politicalStatus:"预备党员",
-                 GPA:5.0
-             },
-             {   department:"计算机与信息学院",
-                 grade:"2015级",
-                 domain:"计算机科学与技术",
-                 classes:"5",
-                 id:1506010513,
-                 name:"王秉发",
-                 sex:"男",
-                 politicalStatus:"入党积极分子",
-                 GPA:5.0
-             }
-         ]
-     }
+    /*获取搜索的学生记录*/
+    // var students={
+    //     "selectedStudents":[
+    //         {   department:"计算机与信息学院",
+    //             grade:"2015级",
+    //             domain:"计算机科学与技术",
+    //             classes:"5",
+    //             id:1506010512,
+    //             name:"金培源",
+    //             sex:"男",
+    //             politicalStatus:"预备党员",
+    //             GPA:5.0
+    //         },
+    //         {   department:"计算机与信息学院",
+    //             grade:"2015级",
+    //             domain:"计算机科学与技术",
+    //             classes:"5",
+    //             id:1506010513,
+    //             name:"王秉发",
+    //             sex:"男",
+    //             politicalStatus:"入党积极分子",
+    //             GPA:5.0
+    //         }
+    //     ]
+    // }
 
     var records=6;           //查询到的记录数
     var column=10            //表格的列数

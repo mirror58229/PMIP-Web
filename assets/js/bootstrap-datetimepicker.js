@@ -1962,6 +1962,19 @@
   );
   $(function () {
     $('[data-provide="datetimepicker-inline"]').datetimepicker();
+      /**
+       * 设置日期控件
+       * @author wbf
+       * */
+      $("#date").datetimepicker({
+          startView:4,
+          maxView:4,
+          minView:2,
+          format: "yyyy-mm-dd ",
+          autoclose: true,
+          todayBtn: true,
+          todayHighlight:true
+      });
   });
 
 }));

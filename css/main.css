@@ -14,9 +14,6 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
-}	
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -105,10 +102,7 @@ textarea {
 .tb-stu tr{
     /*height: 40px;*/
 }
-.selectChoice{
-    display: inline;
-    /*padding-right: 0;*/
-}
+
 
 
 
@@ -950,12 +944,82 @@ h1, h2, h3, h4, h5, h6 {
 /*=========================
 	9) footer Start
 ===========================*/
-
-#footer {
-    background: #2D312F;
+/*--start-footer--*/
+.footer{
+    background: #fafffb;
     text-align: center;
-    padding-top: 75px;
-    padding-bottom: 50px;
+    padding: 4em 0px 1em 0;
+}
+.footer-left h3{
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    border-bottom: 1px solid #ABABB1;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+    color: #333;
+}
+.footer-left ul {
+    padding: 0;
+    margin: 4% 0 0 0;
+}
+.footer-left ul li{
+    list-style:none;
+    margin:5px 0px;
+}
+.footer-left ul li:last-child{
+    margin-bottom:0;
+}
+.footer-left ul li a{
+    font-size: 0.85em;
+    color: #999;
+}
+.footer-left ul li a:hover{
+    color:#18C9D2;
+    text-decoration:none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.footer-left {
+    border-right: 1px solid #555;
+    width: 20%;
+}
+.footer-left.lost{
+    border:none;
+}
+ul.socials {
+    margin: 2% auto 1%;
+    text-align: center;
+    background-color: #333;
+    padding-top: 5px;
+}
+/*--end-footer--*/
+/*--copy-right--*/
+ul.socials li {
+    list-style: none;
+    display: inline-block;
+}
+.socials li a {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 51px!important;
+    width: 51px!important;
+}
+.socials li .soc1 {
+    background: url(../img/social-1.png) 0 100% no-repeat;
+}
+.socials li .soc2 {
+    background: url(../img/social-2.png) 0 100% no-repeat;
+}
+.socials li .soc3 {
+    background: url(../img/social-3.png) 0 100% no-repeat;
+}
+.socials li .soc1:hover, .socials li .soc2:hover, .socials li .soc3:hover {
+    background-position: 0 0%;
 }
 
 #footer .block {
@@ -1098,8 +1162,35 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 170px
 }
 
-
-
-
-
+/*--//copy-right--*/
+.copy {
+    padding-bottom: 1em;
+}
+.copy p{
+    color: #333;
+    font-size: 0.9em;
+    text-align: center;
+}
+.copy p a{
+    color:#18C9D2;
+}
+.copy p a:hover{
+    text-decoration:underline;
+}
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;/*10*/
+    right: 45px;/*45*/
+    overflow: hidden;
+    width: 40px;
+    height: 22px;
+    border: none;
+    text-indent: 100%;
+    background: url(../img/move-top.png) no-repeat 0px 0px;
+}
+body{width:100%;min-height:100%;position:relative;}
+#main{padding-bottom:140px;}
+#footer{height:140px;position:absolute;bottom:0px;left:0px;width:100%;}
 
