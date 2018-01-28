@@ -1,9 +1,5 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<jsp:useBean id="student" class="com.data.bean.Person"></jsp:useBean>
-<jsp:useBean id="gradetable" class="com.data.bean.Gradetable"></jsp:useBean>
-<jsp:useBean id="material" class="com.data.bean.Material"></jsp:useBean>
-<jsp:useBean id="massage" class="com.data.bean.Massage"></jsp:useBean>
 <% String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
@@ -352,9 +348,8 @@
                             <div class="col-lg-4">
 		                        <label for="name">材料名称</label>
 		                        <select class="form-control selectChoice" name=" "><!-- *********** -->
-		                            <option value="0">入党申请</option>
-		                            <option value="1">思想汇报</option>
-		                            <option value="2">自传</option>
+		                            <option value="0">思想汇报</option>
+		                            <option value="1">转正申请</option>
 		                        </select>
 		                     
 		                        <div class="form-group">
