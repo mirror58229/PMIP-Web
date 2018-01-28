@@ -13,6 +13,17 @@
 	<script src="assets/js/bootstrap.js"></script>
 </head>
 <body>
+<%
+    String mess=(String)session.getAttribute("msg");
+    if(!"".equals(mess)  && mess!=null){
+         
+ %>
+    <script type="text/javascript">
+        alert("<%=mess%>");
+	</script>
+<% }
+%>
+
 <form id="sub" action="" method="post">
 
 	<div class="container">
@@ -22,7 +33,8 @@
 			</div>
 		</div>
 		<div class="row"></div>
-		<div class="row"></div>
+		<div class="row">
+		</div>
 		<div class="row"></div>
 		
 		<div class="row">
@@ -64,15 +76,16 @@
 
 		</div>
 		
-		<div class="row">
-			<div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 text-center" id="message" style="display: none;color: red;">
+		<div class="row" id="message" style="display: none;color: red;height: 22px;">
+			<div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 text-center" >
 				<p >请选择登录类型</p>
 			</div>
 		</div>
-		<div class="row"></div>
+		<div class="row" id="empty" style="height: 22px;"></div>
+
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-				<input type="submit" name="submit" class="btn btn-info col-lg-12 col-xs-12 col-md-12 col-sm-12" onclick="return check()" value="登录">
+				<input type="submit" name="submit" class="btn btn-info col-lg-12 col-xs-12 col-md-12 col-sm-12" onmouseover="return check()" value="登录">
 			</div>
 			
 		</div>

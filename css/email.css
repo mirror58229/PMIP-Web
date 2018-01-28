@@ -1,0 +1,82 @@
+.container
+		{
+			border: 1px solid black;
+			margin-top: 15%;
+			height: 260px;
+			width: 550px;
+			border-radius: 10px;
+			border: 2px solid #46b8da;
+		}
+		
+		#top
+		{
+			background-color: #46b8da;
+			border-radius: 7px 7px 0px 0px;
+		}
+		#modifyPassword
+		{
+			padding-top: 1px;
+			font-size: 15px;
+			color: #fffaff;
+		}
+		#line
+		{
+			width: 6px;
+			height: 23px;
+			background: blue;
+			padding-right: 0px;
+
+		}
+		#colLine
+		{
+			padding-top: 7px;
+			padding-right: 4px;
+			padding-left: 6px;
+			width: 15px;
+		}
+		#nextColLine
+		{
+			padding-left: 0px;
+			margin-left: 2px;
+			
+		}
+		#empty
+		{
+
+			height: 50px;
+
+		}
+		#empty1
+		{
+
+			height: 35px;
+
+		}
+
+		#studentId
+		{
+			margin-right: : 0px;
+			padding-right: 0px;
+		}
+		#empty2
+		{
+			height: 18px;
+		}
+		#empty3
+		{
+			height: 25px;
+		}
+		#message
+		{
+			color: red;
+			height: 35px;
+			font-size: 13px;
+			display: none;
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+		}
+		#word
+		{
+			float: right;
+			padding-top: 8px;
+		}

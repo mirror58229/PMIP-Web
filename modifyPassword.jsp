@@ -27,22 +27,10 @@
 		</div>
 
 
-		<div class="row" >
-			<div class="col-lg-3 col-md-3 col-xs-3 col-sm-3" id="bord" >
-				<label class="form-label" id="word" >学号：</label>
-			</div>
-			<div class="col-lg-7 col-md-7 col-xs-7 col-sm-7 " >
-				<input type="text" name="personId" style="width: 250px" class="form-control" required autofocus/>
-			</div>			
-			<div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" >
-			</div>
-		</div>
+		
 
 
-		<div class="row" id="empty2">
-		</div>
-
-
+		
 		<div class="row">
 			
 			<div class="col-lg-3 col-md-3 col-xs-3 col-sm-3" id="bord">
@@ -64,7 +52,7 @@
 			</div>
 			<div class="col-lg-7 col-md-7 col-xs-7 col-sm-7">
 				<input type="password" name="confirmPass" 
-			id="repassword" style="width: 250px" class="form-control" required autofocus/>
+			id="repassword" style="width: 250px" class="form-control" required autofocus onclick="changeMessage()" onmouseleave="check()" />
 			</div>	
 			<div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" id="message">
 				密码不一致！
@@ -72,6 +60,18 @@
 		</div>
 
 
+		<div class="row" id="empty2">
+		</div>
+		<div class="row" >
+			<div class="col-lg-3 col-md-3 col-xs-3 col-sm-3" id="bord" >
+				<label class="form-label" id="verifyCode" >验证码：</label>
+			</div>
+			<div class="col-lg-7 col-md-7 col-xs-7 col-sm-7 " >
+				<input type="text" name="personId" style="width: 250px" class="form-control" required autofocus/>
+			</div>			
+			<div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" >
+			</div>
+		</div>
 		<div class="row" id="empty3">
 		</div>
 
