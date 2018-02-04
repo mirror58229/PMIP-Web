@@ -8,7 +8,6 @@ function settime(obj) {
       return;
   }
   else  if(countdown > 0) { 
-
       obj.setAttribute("disabled", true); 
       obj.value="重新发送(" + countdown + ")"; 
           countdown--; 
@@ -17,7 +16,6 @@ function settime(obj) {
   	setTimeout(function() {settime(obj) },1000)
 //  		System.out.print(countdown);
 }
-
 
 // 密码一致性判断
 function validate() {

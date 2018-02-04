@@ -37,8 +37,8 @@ var LeftAlertsLi=$("#LeftAlerts  Li");
 //申请时的各种输入框
 var showntype=document.getElementById("showntype");
 var computerTest=$("#computerTest");
-var Cet4Test=$("#Cet4Test");
-var Cet6Test=$("#Cet6Test");
+//var Cet4Test=$("#Cet4Test");
+//var Cet6Test=$("#Cet6Test");
 var SocialWork=$("#SocialWork");
 var others=$("#others");
 
@@ -65,8 +65,8 @@ function initPage(){
     MidApplicationMaterial.hide();
     
     computerTest.show();
-    Cet4Test.hide();
-    Cet6Test.hide();
+//    Cet4Test.hide();
+//    Cet6Test.hide();
     SocialWork.hide();
     others.hide();
 }
@@ -200,36 +200,36 @@ $("#showntype").change(function (){
 	
 	if(showntype.value.equals("1")){
 		computerTest.show();
-		Cet4Test.hide();
-		Cet6Test.hide();
+//		Cet4Test.hide();
+//		Cet6Test.hide();
 		SocialWork.hide();
 		others.hide();
 	}
 	else if(showntype.value.equals("2")){
 		computerTest.hide();
-		Cet4Test.show();
-		Cet6Test.hide();
+//		Cet4Test.show();
+//		Cet6Test.hide();
 		SocialWork.hide();
 		others.hide();
 	}
 	else if (showntype.value.equals("3")){
 		computerTest.hide();
-		Cet4Test.hide();
-		Cet6Test.show();
+//		Cet4Test.hide();
+//		Cet6Test.show();
 		SocialWork.hide();
 		others.hide();
 	}
 	else if(showntype.value.equals("4")){
 		computerTest.hide();
-		Cet4Test.hide();
-		Cet6Test.hide();
+//		Cet4Test.hide();
+//		Cet6Test.hide();
 		SocialWork.show();
 		others.hide();
 	}
-	else if(showntype.value.equals("4")){
+	else if(showntype.value.equals("5")){
 		computerTest.hide();
-		Cet4Test.hide();
-		Cet6Test.hide();
+//		Cet4Test.hide();
+//		Cet6Test.hide();
 		SocialWork.hide();
 		others.show();
 	}
@@ -239,6 +239,15 @@ String.prototype.equals = function(s){
     return this == s;  
 } 
 
+
+
+
+$(function () { $("#collapseFour").collapse({
+	toggle: false
+})});
+$(function () { $("#collapseTwo").collapse("hide")});
+$(function () { $("#collapseThree").collapse("hide")});
+$(function () { $("#collapseOne").collapse("hide")});
 
 
 

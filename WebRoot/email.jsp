@@ -44,61 +44,44 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="row" id="top">
-      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" id="colLine">
-        <div id="line"></div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="nextColLine">
-        <h5 id="modifyPassword">邮箱验证</h5>
-      </div>
-    </div>
 
-    <div class="row" id="empty">
-    </div>
-
-    <form class="form-inline" role="form" action="${pageContext.request.contextPath }/student/firstLogin.action" method="post">
-    <div class="row">
-      <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" id="bord">
-        <label class="form-label" id="word">邮箱：</label>
-      </div>
-      <div class="col-lg-7 col-md-7 col-xs-7 col-sm-7">
-        <input type="text" name="email" 
-      id="email" style="width: 250px" class="form-control" required autofocus onclick="changeMessage()" onmouseleave="check()" />
-      </div>    
-       <div class=" col-lg-2 col-md-2 col-xs-2 col-sm-2">
-        <input type="submit" name="submit" class="btn btn-info"  value="发送验证码"/>
-      </div>
-    </div>
+	<form class="form-inline" role="form" action="${pageContext.request.contextPath }/student/firstLogin.action" method="post">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" id="bord">
+				<label class="form-label" id="word">邮箱：</label>
+			</div>
+			<div class="col-lg-7 col-md-7 col-xs-7 col-sm-7">
+				<input type="text" name="email" id="email" style="width: 250px" class="form-control" required autofocus onclick="changeMessage()" onmouseleave="check()" />
+			</div>    
+			<div class=" col-lg-2 col-md-2 col-xs-2 col-sm-2">
+				<input type="submit" name="submit" class="btn btn-info"  value="发送验证码"/>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-xs- col-sm-3 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 " id="message">
+				<h5>邮箱格式错误</h5>
+			</div>   
+		</div>
+		<div class="row" id="empty1">
+		</div>
+	</form>
 
 
-    
-      
-    <div class="row">
-      <div class="col-lg-3 col-md-3 col-xs- col-sm-3 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 " id="message">
-        <h5>邮箱格式错误</h5>
-      </div>   
-    </div>
-    <div class="row" id="empty1">
-    </div>
-    </form>
-
-
-  <form class="form-inline" role="form" action="${pageContext.request.contextPath }/student/firstLogin.action" method="post">
-    <div class="row">
-      <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" id="bord">
-        <label class="form-label" id="word">验证码：</label>
-      </div>
-      <div class="col-lg-7 col-md-7 col-xs-7 col-sm-7">
-        <input type="text" name="email" 
-      id="email" style="width: 250px" class="form-control" required autofocus onclick="changeMessage()" onmouseleave="check()" />
-      </div>    
-       <div class=" col-lg-2 col-md-2 col-xs-2 col-sm-2">
-        <input type="submit" name="submit" class="btn btn-info"  value="进入主页面"/>
-      </div>
-    </div>    
-
-  </form>
+	<form class="form-inline" role="form" action="${pageContext.request.contextPath }/student/firstLogin.action" method="post">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-xs-2 col-sm-2" id="bord">
+				<label class="form-label" id="word">验证码：</label>
+			</div>
+			<div class="col-lg-7 col-md-7 col-xs-7 col-sm-7">
+				<input type="text" name="email" id="email" style="width: 250px" class="form-control" required autofocus onclick="changeMessage()" onmouseleave="check()" />
+			</div>    
+			<div class=" col-lg-2 col-md-2 col-xs-2 col-sm-2">
+				<input type="submit" name="submit" class="btn btn-info"  value="进入主页面"/>
+			</div>
+		</div>    
+	
+	</form>
 
 
 

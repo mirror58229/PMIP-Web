@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/bootstrap-fileupload.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	
+
 </head>
 <body>
 
@@ -60,7 +59,7 @@
                         <ul>
                             <li><i class="fa fa-user"></i>当前用户：</li>
                             <li><a href="${pageContext.request.contextPath}/student/quit.action">注销</a></li>
-                            <li><a href="studentModifyPassword.jsp">修改密码</a></li>
+                            <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
                 </div>
@@ -129,43 +128,43 @@
                     <tr>
                         <th>姓名</th>
                         <td>
-                            <!--<c:set target="${student}" property="studentname" value="李金桥"></c:set> ************* -->
+                            <c:set target="${student}" property="studentname" value="李金桥"></c:set><!-- ************* -->
                             ${student.studentname }
                         </td>
                         <th>性别</th>
                         <td>
-                            <!--<c:set target="${student}" property="sex" value="女"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="sex" value="女"></c:set><!-- ************* -->
                             ${student.sex }
                         </td>
                     </tr>
                     <tr>
                         <th>学号</th>
                         <td>
-                            <!--<c:set target="${student}" property="studentnumber" value="1506010518"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="studentnumber" value="1506010518"></c:set><!-- ************* -->
                             ${student.studentnumber }
                         </td>
                         <th>年级专业班级</th>
-                        <%--<td>--%>
-                        	 <%--<c:set target="${student}" property="studentclass" value="15计算机5班"></c:set><!-- ************* -->--%>
-                        	<%--${student.studentclass }--%>
-                        <%--</td>--%>
+                        <td>
+                        	 <c:set target="${student}" property="studentclass" value="15计算机5班"></c:set><!-- ************* -->
+                        	${student.studentclass }
+                        </td>
                     </tr>
                     <tr>
                         <th>政治面貌</th>
                         <td>
-                            <!--<c:set target="${student}" property="state" value="党员"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="state" value="党员"></c:set><!-- ************* -->
                             ${student.state}
                         </td>
                         <th>邮箱</th>
                         <td>
-                            <!--<c:set target="${student}" property="email" value="lijinqiao@hhu.com"> </c:set><!-- ************* -->
+                            <c:set target="${student}" property="email" value="lijinqiao@hhu.com"> </c:set><!-- ************* -->
                             ${student.email}
                         </td>
                     </tr>
                     <tr>
                         <th>绩点</th>
                         <td>
-                            <!--<c:set target="${gradetable}" property="grade" value="2.9"></c:set><!-- ************* -->
+                            <c:set target="${gradetable}" property="grade" value="2.9"></c:set><!-- ************* -->
                             ${gradetable.grade}
                         </td>
                         <th>排名</th>
@@ -174,12 +173,12 @@
                     <tr>
                         <th>四级</th>
                         <td>
-                            <!--<c:set target="${gradetable}" property="cet4grade" value="424"></c:set><!-- ************* -->
+                            <c:set target="${gradetable}" property="cet4grade" value="424"></c:set><!-- ************* -->
                             ${gradetable.cet4grade}
                         </td>
                         <th>六级</th>
                         <td>
-                            <!--<c:set target="${gradetable}" property="cet6grade" value="666"></c:set><!-- ************* -->
+                            <c:set target="${gradetable}" property="cet6grade" value="666"></c:set><!-- ************* -->
                             ${gradetable.cet6grade}
                         </td>
                     </tr>
@@ -213,35 +212,35 @@
                     </tr>
                     <tr>
                         <td>
-                            <!--<c:set target="${student}" property="indirectingtime" value="2017"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="indirectingtime" value="2017"></c:set><!-- ************* -->
                             ${student.indirectingtime}
                         </td>
                         <td>推优时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <!--<c:set target="${student}" property="activisttime" value="2017"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="activisttime" value="2017"></c:set><!-- ************* -->
                             ${student.activisttime}
                         </td>
                         <td>积极分子时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <!--<c:set target="${student}" property="developementtime" value="2017"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="developementtime" value="2017"></c:set><!-- ************* -->
                             ${student.developementtime}
                         </td>
                         <td>发展党员时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <!--<c:set target="${student}" property="probationarytime" value="2017"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="probationarytime" value="2017"></c:set><!-- ************* -->
                             ${student.probationarytime}
                         </td>
                         <td>预备党员时间</td>
                     </tr>
                     <tr>
                         <td>
-                            <!--<c:set target="${student}" property="fullmembertime" value="2017"></c:set><!-- ************* -->
+                            <c:set target="${student}" property="fullmembertime" value="2017"></c:set><!-- ************* -->
                             ${student.fullmembertime}
                         </td>
                         <td>正式党员时间</td>
@@ -257,7 +256,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2 class="panel-title">
-                            	奖励
+                            奖励
                         </h2>
                     </div>
                     <div class="panel-body">
@@ -313,25 +312,25 @@
                             </tr>
 
                             <tr>
-                                <td><!--<c:set target="${material}" property="materialname" value="优秀党员证明材料"></c:set><!-- ************** -->
+                                <td><c:set target="${material}" property="materialname" value="优秀党员证明材料"></c:set><!-- ************** -->
                                     ${material.materialname}
-                                <td><!--<c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set><!-- ************** -->
+                                <td><c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set><!-- ************** -->
                                     <a href="#">${material.materialurl}</a>
                                 </td>
                                 <td>暂无此数据</td>
-                                <td><!--<c:set target="${material}" property="state" value="审核中"></c:set><!-- ************** -->
+                                <td><c:set target="${material}" property="state" value="审核中"></c:set><!-- ************** -->
                                     ${material.state}
                                 </td>
                             </tr>
                             <tr>
                             <tr>
-                                <td><!--<c:set target="${material}" property="materialname" value="社会工作证明材料"></c:set><!-- ************** -->
+                                <td><c:set target="${material}" property="materialname" value="社会工作证明材料"></c:set><!-- ************** -->
                                     ${material.materialname}
-                                <td><!--<c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set><!-- ************** -->
+                                <td><c:set target="${material}" property="materialurl" value="www.baidu.com"></c:set><!-- ************** -->
                                     <a href="#">${material.materialurl}</a>
                                 </td>
                                 <td>暂无此数据</td>
-                                <td><!--<c:set target="${material}" property="state" value="已通过"></c:set><!-- ************** -->
+                                <td><c:set target="${material}" property="state" value="已通过"></c:set><!-- ************** -->
                                     ${material.state}
                                 </td>
                             </tr>
@@ -349,7 +348,8 @@
                      <form role="form" method="post" action="${pageContext.request.contextPath }/material/uploadFile.action" enctype="multipart/form-data">
                     <div class="form-group">
                     	<div class="col-md-12">
-
+                        	<div class="col-lg-4">
+                         	</div>
                             <div class="col-lg-4">
 		                        <label for="name">材料名称</label>
 		                        <select class="form-control selectChoice" name=" "><!-- *********** -->
@@ -379,24 +379,26 @@
                     <div class="form-group" >
                     
                         <div class="col-md-12">
-
+                        	<div class="col-lg-4">
+                         	</div>
                             <div class="col-lg-4">
                         		<label for="name">证明类型</label>
                         		
                         		<select class="form-control" id="showntype" >
                         		<option value="0"></option>
                         		<option value="1">计算机等级考试</option>
-                        		<!-- <option value="2">四级成绩</option>
-                        		<option value="3">六级成绩</option> -->
+                        		<option value="2">四级成绩</option>
+                        		<option value="3">六级成绩</option>
                         		<option value="4">社会工作</option>
-                                <option value="5">获奖情况</option>
+                                <option value="5">其他</option>
                         		</select>
                         		
                         	</div>
                         </div>  
                         <br>
                          <div class="col-md-12">
-
+                         	<div class="col-lg-4">
+                         	</div>
 	                        <div class="col-lg-4">
 	                        	<div class="cet4add">
 	                        		<label for="choosefile">名称</label>
@@ -413,13 +415,13 @@
 				                        </select> 
 			                        </div>
 			                        
-				                        <!-- <div id="Cet4Test">
-					                        <input type="number" name="Cet4" /> 
-				                        </div>
-				                        
-				                        <div id="Cet6Test">
-					                        <input type="number" name="Cet6" /> 
-				                        </div> -->
+			                        <div id="Cet4Test">
+				                        <input type="number" name="Cet4" /> 
+			                        </div>
+			                        
+			                        <div id="Cet6Test">
+				                        <input type="number" name="Cet6" /> 
+			                        </div>
 			                        <div id="SocialWork">
 			                        	<!--<select class="form-control" >
 				                        	<option value="0"></option>
@@ -428,7 +430,7 @@
 				                        	<option value="3">班级</option>
 				                        </select> 
 				                        <br>-->
-				                        <input  name="SocialWork" />
+				                        <input " name="SocialWork" /> 
 				                        
 			                        </div>
 			                        <div id="others">
@@ -440,7 +442,8 @@
 	                        </div>
 	                    </div>
 	                    <div class="col-md-12">
-
+	                    	<div class="col-lg-4">
+                         	</div>
 		                    <div class="col-lg-4">
 		                    	<div class="form-group">
 			                        <label for="inputfile">上传文件</label>
@@ -471,81 +474,44 @@
            	
            	<div class="MidNotification">
 				<div class="col-md-12">
-					<div class="panel-group" id="accordion">
-						
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" 
-									   href="#collapseOne">
-										<!--<c:set target="${massage}" property="newstitle" value="十九大报告"></c:set>-->
-										${massage.newstitle}
-									</a>
-									<!--<c:set target="${massage}" property="newstime" value="2017.09.03"></c:set>-->
-									${massage.newstime}
-								</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<!--<c:set target="${massage}" property="newscontent" value="十九大报告分析"></c:set>-->
+					<table class="table table-bordered">
+						<tbody>
+							<tr>
+								<th>标题</th>
+								<th>内容</th>
+								<th>时间</th>
+								<th>状态</th>
+							</tr>
+							<tr>
+								<td><c:set target="${massage}" property="newstitle" value="十九大报告"></c:set>
+									${massage.newstitle}
+								</td>
+								<td><c:set target="${massage}" property="newscontent" value="十九大报告分析"></c:set>
 									${massage.newscontent}
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" 
-									   href="#collapseTwo">
-										<!--<c:set target="${massage}" property="newstitle" value="党员培训通知"></c:set>-->
-										${massage.newstitle}
-									</a>
-									<!--<c:set target="${massage}" property="newstime" value="2017.10.10"></c:set>-->
+								</td>
+								<td><c:set target="${massage}" property="newstime" value="2017.09.03"></c:set>
 									${massage.newstime}
-								</h4>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body">
-									<!--<c:set target="${massage}" property="newscontent" value="www.baidu.com"></c:set>-->
-									<a href="#">${massage.newscontent}</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" 
-									   href="#collapseThree">
-										第 3 部分
-									</a>
-								</h4>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body">
-									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
-									nesciunt sapiente ea proident. Ad vegan excepteur butcher vice 
-									lomo.
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" 
-									   href="#collapseFour">
-										第 4 部分
-									</a>
-								</h4>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse">
-								<div class="panel-body">
-									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
-									nesciunt sapiente ea proident. Ad vegan excepteur butcher vice 
-									lomo.
-								</div>
-							</div>
-						</div>
-					</div>
+								</td>
+								<td><c:set target="${massage}" property="newstate" value="已读"></c:set>
+									${massage.newstate}
+								</td>
+							</tr>
+							<tr>
+							<td><c:set target="${massage}" property="newstitle" value="党员培训通知"></c:set>
+								${massage.newstitle}
+							</td>
+							<td><c:set target="${massage}" property="newscontent" value="www.baidu.com"></c:set>
+								<a href="#">${massage.newscontent}</a>
+							</td>
+							<td><c:set target="${massage}" property="newstime" value="2017.10.10"></c:set>
+								${massage.newstime}
+							</td>
+							<td><c:set target="${massage}" property="newstate" value="未读"></c:set>
+								${massage.newstate}
+							</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 
@@ -561,12 +527,11 @@
             </div><!-- col-md-12 -->
         </div><!-- .row -->
     </div><!-- .container -->
-    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/jquery-2.1.1.js"></script>
     <script src="assets/js/student.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap-fileupload.js"></script>s
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootstrap-fileupload.js"></script>
 </div><!-- #footer -->
-
 
 </body>
 </html>
